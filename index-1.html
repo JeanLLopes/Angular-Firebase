@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <!-- Bootstrap JavaScript --> 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+        <!--IMPORTAMOS O ARQUIVO QUE FIZEMOS-->
+        <script src="index-1.js"></script>
+    </head>
+
+    <!--NO ANGULAR TODAS AS DIRETIVAS INTERNAS DO FRAMEWORK
+    INICIAM COM A PALAVRA NG- ALGUMA COISA 
+    ESSAS DIRETIVAS FAZEM PARTE DO COREE PADRÃO DO ANGULAR -->
+    <!--<body ng-app ng-init="primeiroNome = 'Jean';segundoNome = 'Lopes';">
+        <h1 class="text-center">Hello World</h1>
+
+        <p>Primeiro Nome: <strong>{{primeiroNome}}</strong></p>
+        <p>Segundo Nome: <strong>{{segundoNome}}</strong></p>
+
+        <!-- jQuery 
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <!-- Bootstrap JavaScript 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    </body>-->
+
+    <body class="container" ng-app="bindingApp" ng-controller="BindingController">
+        <p>Primeiro Nome: <strong>{{primeiroNome}}</strong></p>
+        <p>Nome do Meio: <strong>{{segundoNome}}</strong></p>
+        <p>Ultimo Nome: <strong>{{terceiroNome}}</strong></p>
+
+        <br><br>
+        <label>1º Nome <input type="text" ng-model="primeiroNome"/></label>
+        <br>
+        <label>2º Nome <input type="text" ng-model="segundoNome"/></label>
+        <br>
+        <label>3º Nome <input type="text" ng-model="terceiroNome"/></label>
+    </body>
+</html>
