@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br ">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,20 +17,24 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <!--FIREBASE-->
+        <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>    </head>
+
         <!--ANGULAR-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="index-2.js"></script>
-    </head>
-    <body class="container" ng-app="tarefasApp" ng-controller="tarefasCtrl" >
+
+    <body class="container" ng-app="tarefasApp" ng-controller="tarefasCtrl" ng-init="inicializacao()">
         <h1 class="text-center text-danger">LISTA DE TAREFAS</h1>
         <br>
         <hr style="border: 1px solid #ccc">
         <br>
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3 well">
-                <input type="text" class="form-control">
+                <p class="text-center" ng-show="tarefa != ''">Você esta Adicionando a terefa: <strong>{{tarefa}}</strong></p>
+                <input type="text" class="form-control" ng-model="tarefa">
                 <br>
-                <button type="button" class="btn btn-block btn-primary">
+                <button type="button" ng-click="adicionar()" class="btn btn-block btn-primary">
                     Enviar Informações
                 </button>
                 <br>
